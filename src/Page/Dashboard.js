@@ -178,13 +178,13 @@ const Dashboard = () => {
                   <div className="column" key={index}>
                     <div className="Header">
                       <div className="icon-text">
-                        {item == "Todo" ? (
+                        {item === "Todo" ? (
                           <i className="bx bx-circle" id="todo"></i>
-                        ) : item == "In progress" ? (
+                        ) : item === "In progress" ? (
                           <i className="bx bx-adjust" id="progress"></i>
-                        ) : item == "Backlog" ? (
+                        ) : item === "Backlog" ? (
                           <i className="bx bx-task-x" id="backlog"></i>
-                        ) : item == "Done" ? (
+                        ) : item === "Done" ? (
                           <i className="bx bxs-check-circle" id="done"></i>
                         ) : (
                           <i className="bx bxs-x-circle" id="cancel"></i>
@@ -228,7 +228,7 @@ const Dashboard = () => {
         </div>
       </>
     );
-  } else if (grouping == "users") {
+  } else if (grouping === "users") {
     return (
       <>
         <div>
@@ -262,20 +262,20 @@ const Dashboard = () => {
                             >
                               <img
                                 src={
-                                  userId == "usr-1"
+                                  userId === "usr-1"
                                     ? profile1
-                                    : userId == "usr-2"
+                                    : userId === "usr-2"
                                     ? profile6
-                                    : userId == "usr-3"
+                                    : userId === "usr-3"
                                     ? profile7
-                                    : userId == "usr-4"
+                                    : userId === "usr-4"
                                     ? profile5
-                                    : userId == "usr-5"
+                                    : userId === "usr-5"
                                     ? profile4
                                     : profile
                                 }
                                 className={
-                                  String(availableUser[userId]) == "false"
+                                  String(availableUser[userId]) === "false"
                                     ? "user-avatar-unavailable"
                                     : "user-avatar"
                                 }
@@ -340,16 +340,16 @@ const Dashboard = () => {
                   <div className="column" key={index}>
                     <div className="Header">
                       <div className="icon-text-priority">
-                        {item == "0" ? (
+                        {item === "0" ? (
                           <i
                             className="bx bx-dots-horizontal-rounded"
                             id="noPriority"
                           ></i>
-                        ) : item == "1" ? (
+                        ) : item === "1" ? (
                           <i className="bx bx-signal-2" id="low"></i>
-                        ) : item == "2" ? (
+                        ) : item === "2" ? (
                           <i className="bx bx-signal-3" id="medium"></i>
-                        ) : item == "3" ? (
+                        ) : item === "3" ? (
                           <i className="bx bx-signal-4" id="high"></i>
                         ) : (
                           <i
@@ -358,13 +358,13 @@ const Dashboard = () => {
                           ></i>
                         )}
                         <span className="text">
-                          {`Priority ${item}` == "Priority 4"
+                          {`Priority ${item}` === "Priority 4"
                             ? "Urgent"
-                            : `Priority ${item}` == "Priority 3"
+                            : `Priority ${item}` === "Priority 3"
                             ? "High"
-                            : `Priority ${item}` == "Priority 2"
+                            : `Priority ${item}` === "Priority 2"
                             ? "Medium"
-                            : `Priority ${item}` == "Priority 1"
+                            : `Priority ${item}` === "Priority 1"
                             ? "Low"
                             : "No Priority"}
                         </span>
